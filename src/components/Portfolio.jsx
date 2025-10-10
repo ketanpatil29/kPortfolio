@@ -58,9 +58,17 @@ const Portfolio = () => {
             <div className="flex flex-col items-center justify-center m-10">
                 
 
-                <Link to="/projects"><button className="bg-amber-100 text-black text-2xl rounded-md w-36 mb-3 cursor-pointer transition-all duration-200 hover:scale-105">Projects</button></Link>
-                <button className="bg-amber-100 text-black text-2xl rounded-md w-36 mb-3 cursor-pointer">Github</button>
-                <button className="bg-amber-100 text-black text-2xl rounded-md w-36 mb-3 cursor-pointer">LinkedIn</button>
+                <Link to="/projects">
+                  <button className="bg-amber-100 text-black text-2xl rounded-md w-36 mb-3 cursor-pointer transition-all duration-200 hover:scale-105">Projects</button>
+                </Link>
+
+                <Link to="https://github.com/ketanpatil29" target="_blank" rel="noopener noreferrer">
+                  <button className="bg-amber-100 text-black text-2xl rounded-md w-36 mb-3 cursor-pointer transition-all duration-200 hover:scale-105">Github</button>
+                </Link>
+
+                <Link to="https://www.linkedin.com/in/ketan-patil-788417389/" target="_blank" rel="noopener noreferrer">
+                  <button className="bg-amber-100 text-black text-2xl rounded-md w-36 mb-3 cursor-pointer transition-all duration-200 hover:scale-105">LinkedIn</button>
+                </Link>
 
                 <h3 className="font-bold text-2xl mt-3 mb-3">Contact Me</h3>
 
