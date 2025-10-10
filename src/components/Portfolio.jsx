@@ -1,4 +1,9 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+
+import linkImg from "../assets/link.png";
+import githubImg from "../assets/github.png";
+import linkedInImg from "../assets/linkedin.png";
 
 const Typewriter = ({ words, speed = 150, eraseSpeed = 100, delay = 1000 }) => {
   const [text, setText] = useState("");
@@ -50,13 +55,27 @@ const Portfolio = () => {
                 </a>
             </p>
 
-            <div className="flex flex-col items-center justify-center m-10">             
-                <button className="bg-amber-100 text-black text-2xl rounded-md w-32 mb-3 cursor-pointer">Projects</button>
-                <button className="bg-amber-100 text-black text-2xl rounded-md w-32 mb-3 cursor-pointer">Github</button>
-                <button className="bg-amber-100 text-black text-2xl rounded-md w-32 mb-3 cursor-pointer">LinkedIn</button>
+            <div className="flex flex-col items-center justify-center m-10">
+                
 
-                <h3 className="font-bold text-2xl mt-3 mb-3">Contact me</h3>
-                <button></button>
+                <Link to="/projects"><button className="bg-amber-100 text-black text-2xl rounded-md w-36 mb-3 cursor-pointer transition-all duration-200 hover:scale-105">Projects</button></Link>
+                <button className="bg-amber-100 text-black text-2xl rounded-md w-36 mb-3 cursor-pointer">Github</button>
+                <button className="bg-amber-100 text-black text-2xl rounded-md w-36 mb-3 cursor-pointer">LinkedIn</button>
+
+                <h3 className="font-bold text-2xl mt-3 mb-3">Contact Me</h3>
+
+                <button className="bg-amber-100 text-black text-2xl rounded-md w-36 mb-3 cursor-pointer">Email</button>
+                <button className="bg-amber-100 text-black text-2xl rounded-md w-36 mb-3 cursor-pointer">Discord</button>
+
+                <h3 className="font-bold text-2xl mt-3 mb-3">Off Topic</h3>
+
+                <button className="bg-amber-100 text-black text-2xl rounded-md w-36 mb-3 cursor-pointer">Posts</button>
+                <button className="bg-amber-100 text-black text-2xl rounded-md w-36 mb-3 cursor-pointer">Instagram</button>
+            </div>
+
+            <div className="flex">
+              <img src={githubImg} alt="github" className="w-8 h-8 mr-2 text-[#a9a9b3]" />
+              <img src={linkedInImg} alt="linkedIn" className="w-8 h-8 mr-2" />
             </div>
         </div>
     </section>
