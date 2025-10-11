@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
-import linkImg from "../assets/link.png";
-import githubImg from "../assets/github.png";
-import linkedInImg from "../assets/linkedin.png";
+import { FaGithub, FaLinkedin, FaInstagram, FaDiscord } from "react-icons/fa";
 
 const Typewriter = ({ words, speed = 150, eraseSpeed = 100, delay = 1000 }) => {
   const [text, setText] = useState("");
@@ -39,8 +37,8 @@ const Typewriter = ({ words, speed = 150, eraseSpeed = 100, delay = 1000 }) => {
 
 const Portfolio = () => {
   return (
-    <section>
-        <div className="text-[#a9a9b3] flex flex-col items-center justify-center mt-16">
+    <section className="text-[#a9a9b3]">
+        <div className="flex flex-col items-center justify-center mt-16">
             <h1 className="font-bold text-4xl">Ketan</h1>
                 <h3 className="text-xl mt-2">
                     <Typewriter words={["MERN Stack Dev.", "Problem Solver."]} />
@@ -81,10 +79,27 @@ const Portfolio = () => {
                 <button className="bg-amber-100 text-black text-2xl rounded-md w-36 mb-3 cursor-pointer">Instagram</button>
             </div>
 
-            <div className="flex">
-              <img src={githubImg} alt="github" className="w-8 h-8 mr-2 text-[#a9a9b3]" />
-              <img src={linkedInImg} alt="linkedIn" className="w-8 h-8 mr-2" />
+            <div className="flex text-[#a9a9b3] space-x-3">
+              <a href="https://github.com/ketanpatil29" target="_blank" rel="noopener noreferrer" className="inline-flex items-center">
+                <FaGithub className="w-7 h-7" />
+              </a>
+
+              <a href="https://www.linkedin.com/in/ketan-patil-788417389/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center">
+                <FaLinkedin className="w-7 h-7" />
+              </a>
+
+              <a href="https://instagram.com/your" target="_blank" rel="noopener noreferrer" className="inline-flex items-center">
+                <FaInstagram className="w-7 h-7" />
+              </a>
+
+              <a href="#" className="inline-flex items-center">
+                <FaDiscord className="w-7 h-7" />
+              </a>
             </div>
+        </div>
+
+        <div className="fixed bottom-0 left-0 w-full text-center mb-3">
+          © {new Date().getFullYear()} Ketan Patil
         </div>
     </section>
   );
