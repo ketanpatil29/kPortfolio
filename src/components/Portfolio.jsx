@@ -48,9 +48,9 @@ const Portfolio = () => {
             <p className="max-w-230 text-center mt-3">Software developer from Ahmedabad (India) with hands-on experience in building projects using the MERN stack.
                  Currently enhancing skills in React, Node.js, and databases while practicing DSA to strengthen problem-solving ability.
                  Quick to adapt, eager to learn, and capable of completing tasks efficiently
-                 <a href="#" className="text-blue-400 hover:underline inline-block">
+                 <Link to="/about" className="text-blue-400 hover:underline inline-block">
                     ...More about me?
-                </a>
+                </Link>
             </p>
 
             <div className="flex flex-col items-center justify-center m-10">
