@@ -55,15 +55,15 @@ const neonSweep = {
 
 const Portfolio = () => {
   return (
-    <section className="text-[#a9a9b3]">
-      <div className="flex flex-col items-center justify-center mt-14">
-        
+    <section className="text-[#a9a9b3] max-w-full md:max-w-[750px] lg:max-w-[1300px] mx-auto px-4">
+      <div className="flex flex-col items-center justify-center text-center mt-14">
+
         <motion.h1
           variants={neonSweep}
           initial="hidden"
           animate="show"
           transition={{ duration: 1 }}
-          className="font-bold text-4xl">
+          className="font-bold text-3xl sm:text-4xl md:text-5xl">
           Ketan
         </motion.h1>
 
@@ -76,7 +76,7 @@ const Portfolio = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 2 }}
-          className="max-w-230 text-center mt-3">
+          className="max-w-[650px] md:max-w-[720px] lg:max-w-[950px] text-center mt-3">
           Software developer from Ahmedabad (India) with hands-on experience in building projects using the MERN stack.
           Currently enhancing skills in React, Node.js, and databases while practicing DSA to strengthen problem-solving ability.
           Quick to adapt, eager to learn, and capable of completing tasks efficiently
