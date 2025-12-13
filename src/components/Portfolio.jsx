@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 import { FaGithub, FaLinkedin, FaInstagram, FaDiscord } from "react-icons/fa";
+
+import GuideChibi from "./GuideChibi";
 
 const Typewriter = ({ words, speed = 150, eraseSpeed = 100, delay = 1000 }) => {
   const [text, setText] = useState("");
@@ -35,72 +38,102 @@ const Typewriter = ({ words, speed = 150, eraseSpeed = 100, delay = 1000 }) => {
   return <span>{text}</span>;
 };
 
+const neonSweep = {
+  hidden: {
+    opacity: 0,
+    clipPath: "inset(0 100% 0 0)",
+  },
+  show: {
+    opacity: 1,
+    clipPath: "inset(0 0% 0 0)",
+    transition: {
+      duration: 1,
+      ease: "easeOut",
+    }
+  }
+};
+
 const Portfolio = () => {
   return (
     <section className="text-[#a9a9b3]">
-        <div className="flex flex-col items-center justify-center mt-16">
-            <h1 className="font-bold text-4xl">Ketan</h1>
-                <h3 className="text-xl mt-2">
-                    <Typewriter words={["MERN Stack Dev.", "Problem Solver."]} />
-                <span className="ml-1 animate-blink">|</span>
-            </h3>
+      <div className="flex flex-col items-center justify-center mt-14">
+        
+        <motion.h1
+          variants={neonSweep}
+          initial="hidden"
+          animate="show"
+          transition={{ duration: 1 }}
+          className="font-bold text-4xl">
+          Ketan
+        </motion.h1>
 
-            <p className="max-w-230 text-center mt-3">Software developer from Ahmedabad (India) with hands-on experience in building projects using the MERN stack.
-                 Currently enhancing skills in React, Node.js, and databases while practicing DSA to strengthen problem-solving ability.
-                 Quick to adapt, eager to learn, and capable of completing tasks efficiently
-                 <Link to="/about" className="text-blue-400 hover:underline inline-block">
-                    ...More about me?
-                </Link>
-            </p>
+        <h3 className="text-xl mt-2">
+          <Typewriter words={["MERN Stack Dev.", "Problem Solver."]} />
+          <span className="ml-1 animate-blink">|</span>
+        </h3>
 
-            <div className="flex flex-col items-center justify-center m-10">
-                
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 2 }}
+          className="max-w-230 text-center mt-3">
+          Software developer from Ahmedabad (India) with hands-on experience in building projects using the MERN stack.
+          Currently enhancing skills in React, Node.js, and databases while practicing DSA to strengthen problem-solving ability.
+          Quick to adapt, eager to learn, and capable of completing tasks efficiently
+          <br></br>
+          <Link to="/about" className="text-blue-400 hover:underline inline-block">
+            ...More about me?
+          </Link>
+        </motion.p>
 
-                <Link to="/projects">
-                  <button className="bg-amber-100 text-black text-2xl rounded-md w-36 mb-3 cursor-pointer transition-all duration-200 hover:scale-105">Projects</button>
-                </Link>
+        <div className="flex flex-col items-center justify-center m-10">
 
-                <Link to="https://github.com/ketanpatil29" target="_blank" rel="noopener noreferrer">
-                  <button className="bg-amber-100 text-black text-2xl rounded-md w-36 mb-3 cursor-pointer transition-all duration-200 hover:scale-105">Github</button>
-                </Link>
 
-                <Link to="https://www.linkedin.com/in/ketan-patil-788417389/" target="_blank" rel="noopener noreferrer">
-                  <button className="bg-amber-100 text-black text-2xl rounded-md w-36 mb-3 cursor-pointer transition-all duration-200 hover:scale-105">LinkedIn</button>
-                </Link>
+          <Link to="/projects">
+            <button className="bg-amber-100 text-black text-2xl rounded-md w-36 mb-3 cursor-pointer transition-all duration-200 hover:scale-105">Projects</button>
+          </Link>
 
-                <h3 className="font-bold text-2xl mt-3 mb-3">Contact Me</h3>
+          <Link to="https://github.com/ketanpatil29" target="_blank" rel="noopener noreferrer">
+            <button className="bg-amber-100 text-black text-2xl rounded-md w-36 mb-3 cursor-pointer transition-all duration-200 hover:scale-105">Github</button>
+          </Link>
 
-                <button className="bg-amber-100 text-black text-2xl rounded-md w-36 mb-3 cursor-pointer">Email</button>
-                <button className="bg-amber-100 text-black text-2xl rounded-md w-36 mb-3 cursor-pointer">Discord</button>
+          <Link to="https://www.linkedin.com/in/ketan-patil-788417389/" target="_blank" rel="noopener noreferrer">
+            <button className="bg-amber-100 text-black text-2xl rounded-md w-36 mb-3 cursor-pointer transition-all duration-200 hover:scale-105">LinkedIn</button>
+          </Link>
 
-                <h3 className="font-bold text-2xl mt-3 mb-3">Off Topic</h3>
+          <h3 className="font-bold text-2xl mt-3 mb-3">Contact Me</h3>
 
-                <button className="bg-amber-100 text-black text-2xl rounded-md w-36 mb-3 cursor-pointer">Posts</button>
-                <button className="bg-amber-100 text-black text-2xl rounded-md w-36 mb-3 cursor-pointer">Instagram</button>
-            </div>
+          <button className="bg-amber-100 text-black text-2xl rounded-md w-36 mb-3 cursor-pointer">Email</button>
+          <button className="bg-amber-100 text-black text-2xl rounded-md w-36 mb-3 cursor-pointer">Discord</button>
 
-            <div className="flex text-[#a9a9b3] space-x-3">
-              <a href="https://github.com/ketanpatil29" target="_blank" rel="noopener noreferrer" className="inline-flex items-center">
-                <FaGithub className="w-7 h-7" />
-              </a>
+          <h3 className="font-bold text-2xl mt-3 mb-3">Off Topic</h3>
 
-              <a href="https://www.linkedin.com/in/ketan-patil-788417389/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center">
-                <FaLinkedin className="w-7 h-7" />
-              </a>
-
-              <a href="https://instagram.com/your" target="_blank" rel="noopener noreferrer" className="inline-flex items-center">
-                <FaInstagram className="w-7 h-7" />
-              </a>
-
-              <a href="#" className="inline-flex items-center">
-                <FaDiscord className="w-7 h-7" />
-              </a>
-            </div>
+          <button className="bg-amber-100 text-black text-2xl rounded-md w-36 mb-3 cursor-pointer">Posts</button>
+          <button className="bg-amber-100 text-black text-2xl rounded-md w-36 mb-3 cursor-pointer">Instagram</button>
         </div>
 
-        <div className="fixed bottom-0 left-0 w-full text-center mb-3">
-          © {new Date().getFullYear()} Ketan Patil
+        <div className="flex text-[#a9a9b3] space-x-3 ">
+          <a href="https://github.com/ketanpatil29" target="_blank" rel="noopener noreferrer" className="inline-flex items-center">
+            <FaGithub className="w-7 h-7" />
+          </a>
+
+          <a href="https://www.linkedin.com/in/ketan-patil-788417389/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center">
+            <FaLinkedin className="w-7 h-7" />
+          </a>
+
+          <a href="https://instagram.com/your" target="_blank" rel="noopener noreferrer" className="inline-flex items-center">
+            <FaInstagram className="w-7 h-7" />
+          </a>
+
+          <a href="#" className="inline-flex items-center">
+            <FaDiscord className="w-7 h-7" />
+          </a>
         </div>
+      </div>
+
+      <div className="fixed bottom-0 left-0 w-full text-center mb-3">
+        © {new Date().getFullYear()} Ketan Patil
+      </div>
     </section>
   );
 };
