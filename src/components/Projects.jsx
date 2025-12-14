@@ -5,6 +5,21 @@ import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 import devchan1 from "../assets/devchan1.png";
 import devchan2 from "../assets/devchan2.png";
 
+const neonSweep = {
+    hidden: {
+        opacity: 0,
+        clipPath: "inset(0 100% 0 0)",
+    },
+    show: {
+        opacity: 1,
+        clipPath: "inset(0 0% 0 0)",
+        transition: {
+            duration: 1,
+            ease: "easeOut",
+        }
+    }
+};
+
 const projects = [
     {
         id: "devchan",
@@ -92,10 +107,18 @@ const Projects = () => {
     const [openId, setOpenId] = useState(null);
 
     return (
-        <section className="max-w-full md:max-w-[750px] lg:max-w-[950px] lg:mx-auto mx-auto px-4 text-[#a9a9b3]">
+        <section className="max-w-full md:max-w-[750px] lg:max-w-[1250px] lg:mx-auto mx-auto px-4 text-[#a9a9b3]">
 
-            <header className="text-center my-12">
-                <h1 className="text-4xl md:text-5xl lg:text-4xl font-bold">Projects</h1>
+            <header
+                className="text-center my-12">
+                <motion.h3
+                    variants={neonSweep}
+                    initial="hidden"
+                    animate="show"
+                    transition={{ duration: 1 }} 
+                    className="text-4xl md:text-5xl lg:text-4xl font-bold">
+                        Projects
+                </motion.h3>
                 <p className="mt-3 text-gray-400">
                     A selection of projects I've built while learning and experimenting.
                 </p>
