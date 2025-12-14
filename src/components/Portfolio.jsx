@@ -54,7 +54,7 @@ const neonSweep = {
 
 const Portfolio = () => {
   return (
-    <section className="text-[#a9a9b3] max-w-full md:max-w-[750px] lg:max-w-[1300px] mx-auto px-4">
+    <section className="text-[#a9a9b3] max-w-full md:max-w-[750px] lg:max-w-[1300px] mx-auto px-4 mb-12">
       <div className="flex flex-col items-center justify-center text-center mt-14">
 
         <motion.h1
