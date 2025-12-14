@@ -103,16 +103,18 @@ const Portfolio = () => {
           <h3 className="font-bold text-2xl mt-3 mb-3">Contact Me</h3>
 
           <Link to="mailto:ketanpatil.sh@gmail.com" target="_blank" rel="noopener noreferrer">
-          <button className="bg-amber-100 text-black text-2xl rounded-md w-36 mb-3 transition-all duration-200 hover:scale-105 cursor-pointer">Email</button>
+            <button className="bg-amber-100 text-black text-2xl rounded-md w-36 mb-3 transition-all duration-200 hover:scale-105 cursor-pointer">Email</button>
           </Link>
 
           <Link to="" target="_blank" rel="noopener noreferrer">
-          <button className="bg-amber-100 text-black text-2xl rounded-md w-36 mb-3 cursor-pointer">Discord</button>
+            <button className="bg-amber-100 text-black text-2xl rounded-md w-36 mb-3 cursor-pointer">Discord</button>
           </Link>
 
           <h3 className="font-bold text-2xl mt-3 mb-3">Off Topic</h3>
 
-          <button className="bg-amber-100 text-black text-2xl rounded-md w-36 mb-3 cursor-pointer">Posts</button>
+          <Link to="/post">
+            <button className="bg-amber-100 text-black text-2xl rounded-md w-36 mb-3 cursor-pointer">Posts</button>
+          </Link>
           <button className="bg-amber-100 text-black text-2xl rounded-md w-36 mb-3 cursor-pointer">Instagram</button>
         </div>
 
