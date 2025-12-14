@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 
 import { FaGithub, FaLinkedin, FaInstagram, FaDiscord } from "react-icons/fa";
 
-import GuideChibi from "./GuideChibi";
 
 const Typewriter = ({ words, speed = 150, eraseSpeed = 100, delay = 1000 }) => {
   const [text, setText] = useState("");

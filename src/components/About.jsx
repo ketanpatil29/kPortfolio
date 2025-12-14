@@ -1,7 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
 import welcomeVideo from "../assets/welcome2.mp4";
-import neymar from "../assets/neymar.mp4";
 
 const neonSweep = {
   hidden: {
