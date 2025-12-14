@@ -107,31 +107,31 @@ const Portfolio = () => {
           </Link>
 
           <Link to="" target="_blank" rel="noopener noreferrer">
-            <button className="bg-amber-100 text-black text-2xl rounded-md w-36 mb-3 cursor-pointer">Discord</button>
+            <button className="bg-amber-100 text-black text-2xl rounded-md w-36 mb-3 transition-all duration-200 hover:scale-105 cursor-pointer">Discord</button>
           </Link>
 
           <h3 className="font-bold text-2xl mt-3 mb-3">Off Topic</h3>
 
           <Link to="/post">
-            <button className="bg-amber-100 text-black text-2xl rounded-md w-36 mb-3 cursor-pointer">Posts</button>
+            <button className="bg-amber-100 text-black text-2xl rounded-md w-36 mb-3 transition-all duration-200 hover:scale-105 cursor-pointer">Posts</button>
           </Link>
-          <button className="bg-amber-100 text-black text-2xl rounded-md w-36 mb-3 cursor-pointer">Instagram</button>
+          <button className="bg-amber-100 text-black text-2xl rounded-md w-36 mb-3 transition-all duration-200 hover:scale-105 cursor-pointer">Instagram</button>
         </div>
 
-        <div className="flex text-[#a9a9b3] space-x-3 ">
-          <a href="https://github.com/ketanpatil29" target="_blank" rel="noopener noreferrer" className="inline-flex items-center">
+        <div className="flex text-[#a9a9b3] space-x-3">
+          <a href="https://github.com/ketanpatil29" target="_blank" rel="noopener noreferrer" className="inline-flex items-center transition-colors hover:text-white">
             <FaGithub className="w-7 h-7" />
           </a>
 
-          <a href="https://www.linkedin.com/in/ketan-patil-788417389/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center">
+          <a href="https://www.linkedin.com/in/ketan-patil-788417389/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center transition-colors hover:text-white">
             <FaLinkedin className="w-7 h-7" />
           </a>
 
-          <a href="https://instagram.com/your" target="_blank" rel="noopener noreferrer" className="inline-flex items-center">
+          <a href="https://instagram.com/weakhuh" target="_blank" rel="noopener noreferrer" className="inline-flex items-center transition-colors hover:text-white">
             <FaInstagram className="w-7 h-7" />
           </a>
 
-          <a href="#" className="inline-flex items-center">
+          <a href="#" className="inline-flex items-center transition-colors hover:text-white">
             <FaDiscord className="w-7 h-7" />
           </a>
         </div>
