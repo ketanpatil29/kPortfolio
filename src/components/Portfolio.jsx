@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 
 import { FaGithub, FaLinkedin, FaInstagram, FaDiscord } from "react-icons/fa";
 
-
 const Typewriter = ({ words, speed = 150, eraseSpeed = 100, delay = 1000 }) => {
   const [text, setText] = useState("");
   const [wordIndex, setWordIndex] = useState(0);
@@ -67,7 +66,7 @@ const Portfolio = () => {
         </motion.h1>
 
         <h3 className="text-xl mt-2">
-          <Typewriter words={["MERN Stack Dev.", "Problem Solver."]} />
+          <Typewriter words={["MERN Stack Dev.", "Full Stack Dev.", "Problem Solver."]} />
           <span className="ml-1 animate-blink">|</span>
         </h3>
 
@@ -76,7 +75,7 @@ const Portfolio = () => {
           animate={{ opacity: 1 }}
           transition={{ duration: 2 }}
           className="max-w-[650px] md:max-w-[720px] lg:max-w-[950px] text-center mt-3">
-          Software developer from Ahmedabad (India) with hands-on experience in building projects using the MERN stack.
+          MERN Stack and Full Stack developer from Ahmedabad (India) with hands-on experience in building projects using the MERN.
           Currently enhancing skills in React, Node.js, and databases while practicing DSA to strengthen problem-solving ability.
           Quick to adapt, eager to learn, and capable of completing tasks efficiently
           <br></br>
@@ -98,6 +97,10 @@ const Portfolio = () => {
 
           <Link to="https://www.linkedin.com/in/ketan-patil-788417389/" target="_blank" rel="noopener noreferrer">
             <button className="bg-amber-100 text-black text-2xl rounded-md w-36 mb-3 cursor-pointer transition-all duration-200 hover:scale-105">LinkedIn</button>
+          </Link>
+
+          <Link to="">
+            <button className="bg-amber-100 text-black text-2xl rounded-md w-36 mb-3 cursor-pointer transition-all duration-200 hover:scale-105">Resume</button>
           </Link>
 
           <h3 className="font-bold text-2xl mt-3 mb-3">Contact Me</h3>
