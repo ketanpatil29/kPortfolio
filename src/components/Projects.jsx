@@ -25,7 +25,7 @@ const projects = [
         id: "devchan",
         title: "DevChan",
         year: "2025",
-        role: "Frontend / Backend",
+        projectType: "MERN | Framer-motion",
         short:
             `DevChan is a skill-based social platform for developers to connect, share activities, and explore like-minded profiles based on their intrests and skills.
        It uses GitHub authentication and focuses on building a community around skills, learning, and growth."`,
@@ -43,7 +43,7 @@ const projects = [
         id: "codefightclub",
         title: "CodeFightClub",
         year: "2025",
-        role: "Full-Stack Developer",
+        projectType: "MERN | WebSocket",
         short:
             "A GitHub-authenticated coding platform for practicing and competing.",
         long:
@@ -57,7 +57,7 @@ const projects = [
         id: "kportfolio",
         title: "KPortfolio",
         year: "2024",
-        role: "Designer & Developer",
+        projectType: "Portfolio",
         short:
             "A personal portfolio showcasing my projects and skills.",
         long:
@@ -131,7 +131,7 @@ const Projects = () => {
                         <div className="flex flex-col md:flex-row md:justify-between">
                             <h2 className="text-3xl font-semibold">{project.title}</h2>
                             <span className="text-sm text-gray-400">
-                                {project.year} • {project.role}
+                                {project.year} • {project.projectType}
                             </span>
                         </div>
 
